@@ -36,3 +36,9 @@ def expensive_resource():
     yield resource
 
     print("[TEARDOWN] Expensive resource closed")
+
+
+@pytest.fixture
+def connection():
+    yield "Connection successful"
+    print ("Conftest_yield---------Yield--------------Doesnt matter if the connection is success or not but this line is going to run")
